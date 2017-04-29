@@ -1,0 +1,53 @@
+# 
+# Note : check consistency of area unit and length units in this file
+# Note : check consistency with inertia units of the .mass file
+# 
+# 
+wing_SM701
+0.0                          | Mach
+0     0     0.0              | iYsym  iZsym  Zsym
+
+ 120.000      3.000     40.000  | Sref   Cref   Bref
+   0.000     0.000     0.000          | Xref   Yref   Zref
+ 0.00                        | CDp  (optional)
+
+
+
+#=================================================
+SURFACE                      | (keyword)
+Main Wing
+#Nchord    Cspace   [ Nspan Sspace ]
+13        1.0
+
+INDEX                        | (keyword)
+29922                          | Lsurf
+
+YDUPLICATE
+0.0
+
+SCALE
+1.0  1.0  1.0
+
+TRANSLATE
+0.0  0.0  0.0
+
+ANGLE
+   0.000                         | dAinc
+
+
+#______________
+SECTION                                                     |  (keyword)
+   0.0000    0.0000    0.0000    3.0000   0.000   19    3   | Xle Yle Zle   Chord Ainc   [ Nspan Sspace ]
+
+AFIL 0.0 1.0
+SM701.dat
+
+#______________
+SECTION                                                     |  (keyword)
+   0.0000   20.0000    0.0000    3.0000   0.000   19    3   | Xle Yle Zle   Chord Ainc   [ Nspan Sspace ]
+
+AFIL 0.0 1.0
+SM701.dat
+
+
+
